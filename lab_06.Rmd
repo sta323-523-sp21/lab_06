@@ -1,0 +1,77 @@
+---
+title: "Lab 06"
+author: ""
+date: ""
+output: 
+  html_document:
+    css: lab_06.css
+    toc: true
+    number_sections: false
+    toc_float: true
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = TRUE,
+                      message = FALSE, warning = FALSE, comment = NA,
+                      fig.width = 9, fig.height = 6)
+```
+
+## Introduction
+
+A sandbox website has been set up at 
+http://www2.stat.duke.edu/~sms185/data/fuel/bystore/zteehs/regions.html. Each
+section will contain some data on Sheetz gas stations in Pennsylvania. Use
+functions in `rvest` and `jsonlite` to scrape this data into a tidy form
+as described below.
+
+## Packages
+
+```{r}
+library(tidyverse)
+library(sf)
+```
+
+## Scrape and parse data
+
+#### Step 1
+
+<div class="bkgemph">
+Use the R script file `get_sheetz.R` in directory `R/` to scrape the data on
+all the Sheetz stores at the above mentioned website. Save your results without
+doing any cleaning, this will be done in the next step. Save your result to
+`data/` with `saveRDS()` at the end of your script file.
+</div>
+
+#### Step 2
+
+<div class="bkgemph">
+Use the R script file `parse_sheetz.R` in directory `R/` to parse the data that
+you scraped in Step 1. Parse the data into a tidy tibble with the following
+variables: "storeNumber", "address", "city", "state", "zip", "latitude", 
+"longitude". Save your tidy tibble to `data/` with `saveRDS()` at the end of 
+your script file.
+</div>
+
+## Load data
+
+<div class="bkgemph">
+Load your tidy tibble with `read_rds()`.
+</div>
+
+```{r load_data}
+
+```
+
+## Visualize data
+
+<div class="bkgemph">
+Use your tidy tibble to create a spatial visualization of the data.
+</div>
+
+```{r visualize_data}
+
+```
+
+
+
